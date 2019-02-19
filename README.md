@@ -59,7 +59,7 @@ For `ngModel` to work, You must import `FormsModule` from `@angular/forms`
 
 `ngx-editor` depeneds on the following libraries to work.
 
-* [Font-Awesome v4.7.0](https://github.com/FortAwesome/Font-Awesome/tree/fa-4)
+* [angular-fontawesome](https://github.com/FortAwesome/angular-fontawesome)
 * [Ngx-Bootstrap](https://github.com/valor-software/ngx-bootstrap)
 
 ## Compatibility

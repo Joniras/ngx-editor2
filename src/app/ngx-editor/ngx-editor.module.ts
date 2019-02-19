@@ -9,9 +9,10 @@ import { NgxEditorMessageComponent } from './ngx-editor-message/ngx-editor-messa
 import { NgxEditorToolbarComponent } from './ngx-editor-toolbar/ngx-editor-toolbar.component';
 import { MessageService } from './common/services/message.service';
 import { CommandExecutorService } from './common/services/command-executor.service';
+import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 
 @NgModule({
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, PopoverModule.forRoot()],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, PopoverModule.forRoot(), FontAwesomeModule],
   declarations: [NgxEditorComponent, NgxGrippieComponent, NgxEditorMessageComponent, NgxEditorToolbarComponent],
   exports: [NgxEditorComponent],
   providers: [CommandExecutorService, MessageService]
