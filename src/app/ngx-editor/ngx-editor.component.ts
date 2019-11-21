@@ -77,8 +77,8 @@ export class NgxEditorComponent implements OnInit, ControlValueAccessor {
   /** emits `focus` event when focused in to the textarea */
   @Output() focus: EventEmitter<string> = new EventEmitter<string>();
 
-  @ViewChild('ngxTextArea') textArea: any;
-  @ViewChild('ngxWrapper') ngxWrapper: any;
+  @ViewChild('ngxTextArea', {static: true}) textArea: any;
+  @ViewChild('ngxWrapper', {static: false}) ngxWrapper: any;
 
   Utils: any = Utils;
 
