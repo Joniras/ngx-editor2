@@ -46,9 +46,13 @@
   },
   "homepage": "https://github.com/jrquick17/ngx-text-editor",
   "peerDependencies": {
-    "font-awesome": "^4.7.0",
     "ngx-bootstrap": "^5.2.0",
-    "rxjs": "^6.5.3"
+    "rxjs": "^6.5.3",
+    "@fortawesome/angular-fontawesome": "^0.5.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.25",
+    "@fortawesome/free-brands-svg-icons": "^5.11.2",
+    "@fortawesome/free-regular-svg-icons": "^5.11.2",
+    "@fortawesome/free-solid-svg-icons": "^5.11.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.803.12",
@@ -71,7 +75,6 @@
     "chalk": "^2.4.2",
     "codelyzer": "^5.1.2",
     "core-js": "^3.3.2",
-    "font-awesome": "^4.7.0",
     "gh-pages": "^2.1.1",
     "inquirer": "^7.0.0",
     "jasmine-core": "~3.5.0",
@@ -92,7 +95,12 @@
     "tsickle": "^0.37.0",
     "tslint": "^5.20.0",
     "typescript": "3.5.3",
-    "zone.js": "~0.9.1"
+    "zone.js": "~0.9.1",
+    "@fortawesome/angular-fontawesome": "^0.5.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.25",
+    "@fortawesome/free-brands-svg-icons": "^5.11.2",
+    "@fortawesome/free-regular-svg-icons": "^5.11.2",
+    "@fortawesome/free-solid-svg-icons": "^5.11.2"
   },
   "$schema": "./node_modules/ng-packagr/package.schema.json"
 }

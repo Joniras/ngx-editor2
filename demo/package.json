@@ -35,7 +35,6 @@
     "cordova-plugin-splashscreen": "^5.0.3",
     "cordova.plugin.zoom": "^4.4.5513-0.712",
     "core-js": "^3.3.2",
-    "font-awesome": "^4.7.0",
     "ionicons": "^4.6.3",
     "ngx-bootstrap": "^5.2.0",
     "ngx-text-editor": "^2.1.2",
@@ -43,7 +42,12 @@
     "rxjs": "^6.5.3",
     "rxjs-compat": "^6.5.3",
     "stream": "0.0.2",
-    "timers": "^0.1.1"
+    "timers": "^0.1.1",
+    "@fortawesome/angular-fontawesome": "^0.5.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.25",
+    "@fortawesome/free-brands-svg-icons": "^5.11.2",
+    "@fortawesome/free-regular-svg-icons": "^5.11.2",
+    "@fortawesome/free-solid-svg-icons": "^5.11.2"
   },
   "devDependencies": {
     "@angular-devkit/architect": "^0.803.12",

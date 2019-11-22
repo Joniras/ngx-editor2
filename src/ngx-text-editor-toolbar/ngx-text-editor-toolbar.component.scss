@@ -26,6 +26,14 @@
       border: 1px solid #ddd;
       border-right: transparent;
 
+      .headerNumber{
+        font-size: 15px;
+        top: 1px;
+        position: relative;
+        left: 1px;
+        font-weight: bold;
+      }
+
       &:hover {
         cursor: pointer;
         background-color: #f1f1f1;

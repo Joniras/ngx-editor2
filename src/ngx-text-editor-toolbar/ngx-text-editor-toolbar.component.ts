@@ -5,6 +5,39 @@ import {PopoverConfig} from 'ngx-bootstrap';
 import {CommandExecutorService} from '../common/services/command-executor.service';
 import {MessageService} from '../common/services/message.service';
 import * as Utils from '../common/utils/ngx-text-editor.utils';
+import {
+  faAlignCenter,
+  faAlignJustify,
+  faAlignLeft,
+  faAlignRight,
+  faBold,
+  faCut,
+  faEraser,
+  faFileUpload,
+  faFont,
+  faItalic,
+  faLink,
+  faListOl,
+  faListUl,
+  faMinus,
+  faOutdent,
+  faParagraph,
+  faQuoteLeft,
+  faQuoteRight,
+  faRedo,
+  faStrikethrough,
+  faSubscript,
+  faSuperscript,
+  faTextHeight,
+  faTint,
+  faUnderline,
+  faUndo,
+  faUnlink,
+  faIndent,
+  faHeading
+} from '@fortawesome/free-solid-svg-icons';
+import {faCopy, faImage, faTrashAlt} from '@fortawesome/free-regular-svg-icons';
+import {faYoutube} from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector:    'ngx-text-editor-toolbar',
@@ -50,6 +83,43 @@ export class NgxTextEditorToolbarComponent implements OnInit {
   isImageUploader = false;
 
   wasH1Pressed = false;
+
+  /** Icons for the Toolbar */
+  icons = {
+    heading: faHeading,
+    bold: faBold,
+    italic: faItalic,
+    underline: faUnderline,
+    strikethrough: faStrikethrough,
+    superscript: faSuperscript,
+    subscript: faSubscript,
+    font: faFont,
+    textheight: faTextHeight,
+    tint: faTint,
+    alignleft: faAlignLeft,
+    aligncenter: faAlignCenter,
+    alignright: faAlignRight,
+    alignjustify: faAlignJustify,
+    indent: faIndent,
+    outdent: faOutdent,
+    scissors: faCut,
+    fileso: faCopy,
+    trash: faTrashAlt,
+    eraser: faEraser,
+    undo: faUndo,
+    repeat: faRedo,
+    paragraph: faParagraph,
+    quoteleft: faQuoteLeft,
+    quoteright: faQuoteRight,
+    minus: faMinus,
+    listul: faListUl,
+    listol: faListOl,
+    link: faLink,
+    chainbroken: faUnlink,
+    pictureo: faImage,
+    youtubeplay: faYoutube,
+    upload: faFileUpload
+  };
 
   /**
    * Editor configuration

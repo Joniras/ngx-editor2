@@ -11,6 +11,7 @@ import {NgxTextEditorToolbarComponent} from './ngx-text-editor-toolbar/ngx-text-
 
 import {MessageService} from './common/services/message.service';
 import {CommandExecutorService} from './common/services/command-executor.service';
+import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {CommandExecutorService} from './common/services/command-executor.service
     CommonModule,
     FormsModule,
     PopoverModule.forRoot(),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FontAwesomeModule
   ],
   providers: [
     CommandExecutorService,
