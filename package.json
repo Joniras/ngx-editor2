@@ -1,7 +1,7 @@
 {
-  "name": "ngx-text-editor",
-  "version": "2.1.2",
-  "description": "WYSIWYG Editor for Angular 2+",
+  "name": "@joniras/ngx-editor2",
+  "version": "5.1.0",
+  "description": "WYSIWYG Editor for Angular 8+",
   "license": "MIT",
   "scripts": {
     "build": "ng-packagr -p package.json && mkdir dist/styles && cp -r src/assets/styles/* dist/styles/",
@@ -26,12 +26,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jrquick17/ngx-text-editor.git"
+    "url": "git+https://github.com/Joniras/ngx-editor2.git"
   },
   "author": {
     "name": "Jeremy Quick",
     "email": "me@jrquick.com"
   },
+  "contributors": [
+    {
+      "name": "Joniras",
+      "email": "jonas.schaltegger@gmail.com",
+      "url": "https://github.com/Joniras"
+    }
+  ],
   "keywords": [
     "angular",
     "angular-editor",
@@ -42,9 +49,9 @@
     "ngx-text-editor"
   ],
   "bugs": {
-    "url": "https://github.com/jrquick17/ngx-text-editor/issues"
+    "url": "git+https://github.com/Joniras/ngx-editor2/issues"
   },
-  "homepage": "https://github.com/jrquick17/ngx-text-editor",
+  "homepage": "git+https://github.com/Joniras/ngx-editor2",
   "peerDependencies": {
     "ngx-bootstrap": "^5.2.0",
     "rxjs": "^6.5.3",
