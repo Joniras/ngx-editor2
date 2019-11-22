@@ -13,20 +13,20 @@
 
 ## Description
 
-_A bug: Description of the issue you encountered_
-_A feature: Description of the feature. Cause and its Motivation_
+- [ ] Bug: Description of the issue you encountered_
+- [ ] Feature: Description of the feature. Cause and its Motivation_
 
 ### Version Information
 
 ```
-ngx-editor: x.x.x
+ngx-text-editor: x.x.x
 angular: x.x.x
 ```
 
 ### Browser
 
 - [ ] Chrome - x.x.x
-- [ ]  Mozilla Firefox - x.x.x
+- [ ] Mozilla Firefox - x.x.x
 - [ ] Opera - x.x.x
 - [ ] Microsoft Edge - x.x.x
 

@@ -1,47 +1,46 @@
-# NgxEditor
+# ngx-text-editor
 
-<p align="center">
-  <a href="https://github.com/sibiraj-s/ngx-editor">
-   <img src="https://raw.githubusercontent.com/sibiraj-s/ngx-editor/master/src/assets/icons/ngx-editor.png" alt="ngxEditor">
-  </a>
-</p>
-<p align="center">A Simple WYSIWYG Editor for Angular 6 Applications.</p>
-<p align="center">
-  <a href="https://travis-ci.org/sibiraj-s/ngx-editor">
-    <img alt="Build Status" src="https://travis-ci.org/sibiraj-s/ngx-editor.svg?branch=master">
-  </a>
-  <a href="https://www.npmjs.com/package/ngx-editor">
-    <img alt="npm version" src="https://img.shields.io/npm/v/ngx-editor.svg">
-  </a>
-  <a href="https://www.npmjs.com/package/ngx-editor">
-    <img alt="npm" src="https://img.shields.io/npm/dm/ngx-editor.svg">
-  </a>
-  <a href="https://github.com/sibiraj-s/ngx-editor/blob/master/LICENSE">
-    <img alt="licence" src="https://img.shields.io/npm/l/ngx-editor.svg">
-  </a>
-</p>
+![](example.png)
 
-## Getting Started
+## Index ##
+
+* [About](#about)
+* [Setup](#setup)
+* [Documentation](#documentation)
+* [Issues](#issues)
+* [Contributing](#contributing)
+* [Deploy](#deploy)
+* [Future Plans](#future-plans)
+* [FAQ](#faq)
+
+## About ## 
+
+This is an Angular 2+ WYSIWYG component.  
+
+* Visit the [demo](https://ngx-text-editor.jrquick.com) to see it in action!
+* Visit [my website](https://jrquick.com) for other cool projects!
+
+## Setup
 
 ### Installation
 
-Install via Package managers such as [npm][npm] or [yarn][yarn]
+For Angular 2-7: 
 
-```bash
-npm install ngx-editor --save
-# or
-yarn add ngx-editor
-```
+`npm install ngx-text-editor@^1.0.0 --save`
 
-### Usage
+For Angular 8+:
 
-Import `ngx-editor` module
+`npm install ngx-text-editor --save`
+
+### Documentation
+
+Import `ngx-text-editor` module
 
 ```typescript
-import { NgxEditorModule } from 'ngx-editor';
+import { NgxTextEditorModule } from 'ngx-text-editor';
 
 @NgModule({
-  imports: [ NgxEditorModule ]
+  imports: [ NgxTextEditorModule ]
 })
 ```
 
@@ -50,37 +49,68 @@ Import [font-awesome](https://github.com/FortAwesome/Font-Awesome) into your app
 Then in HTML
 
 ```html
-<app-ngx-editor [placeholder]="'Enter text here...'" [spellcheck]="true" [(ngModel)]="htmlContent"></app-ngx-editor>
+<ngx-text-editor [placeholder]="'Enter text here...'" [spellcheck]="true" [(ngModel)]="htmlContent"></ngx-text-editor>
 ```
 
 For `ngModel` to work, You must import `FormsModule` from `@angular/forms`
 
-#### PeerDependencies
+## Issues ##
 
-`ngx-editor` depeneds on the following libraries to work.
-
-* [angular-fontawesome](https://github.com/FortAwesome/angular-fontawesome)
-* [Ngx-Bootstrap](https://github.com/valor-software/ngx-bootstrap)
-
-## Compatibility
-
-All Evergreen-Browsers are supported
-
-* Google Chrome
-* Microsoft Edge
-* Mozilla Firefox
-* Opera
-
-## Demo
-
-Demo at stackblitz [ngx-editor](https://ngx-editor.stackblitz.io/)
+If you find any issues feel free to open a request in [the Issues tab](https://github.com/jrquick17/ngx-text-editor/issues). If I have the time I will try to solve any issues but cannot make any guarantees. Feel free to contribute yourself.
 
 ## Documentation
 
-Documentation is auto-generated using [compodoc][compodoc], and can be viewed here: [https://sibiraj-s.github.io/ngx-editor/](https://sibiraj-s.github.io/ngx-editor/)
+Documentation is auto-generated using [compodoc][compodoc], and can be viewed here: [https://jrquick17.github.io/ngx-text-editor/](https://jrquick17.github.io/ngx-text-editor/)
 
 [npm]: https://www.npmjs.com/
 [yarn]: https://yarnpkg.com/lang/en/
-[github]: https://sibiraj-s.github.io/
-[wiki]:https://github.com/sibiraj-s/ngx-editor/wiki/ngxEditor
+[github]: https://jrquick17.github.io/
+[wiki]:https://github.com/jrquick17/ngx-text-editor/wiki/ngxTextEditor
 [compodoc]: https://compodoc.github.io/website/
+
+## Contributing
+
+A special thanks to all of our contributors! To contribute yourself just submit a [pull request](https://github.com/jrquick17/ngx-text-editor/pulls)!
+
+* [jrquick17](https://github.com/jrquick17)
+* [khernik93](https://github.com/khernik93)
+* [mzsolt1](https://github.com/mzsolt1)
+* [magicben](https://github.com/magicben)
+* [Norddeutschland](https://github.com/Norddeutschland)
+* [sibiraj-s](https://github.com/sibiraj-s)
+* [ssuperczynski](https://github.com/)
+
+## Deploy ##
+
+* ### Generate Docs ###
+
+   * Run `npm run docs:build`
+   
+* #### Update Version ###
+
+   * Update version `package.json` file in the root directory following [Semantic Versioning (2.0.0)](https://semver.org/).
+
+* ### Build ###
+
+    * Run `npm run build` from root.
+
+* #### Test ###
+
+    * Copy `dist/` contents into `demo/node_modules/ngx-text-editor/`
+        * Run from root:  `cp -fr dist/* demo/node_modules/ngx-text-editor/`
+    * Run `ionic serve` from `demo/`
+    * Run `ionic build --prod` from `demo/`
+
+* #### NPM Release ####
+
+    * Run `npm publish` from `dist/` directory.
+
+* #### Update Changelog ####
+
+    * Add updates to `CHANGELOG.md` in root.
+
+## Future Plans
+
+* Add model for editorConfig 
+* Update stackblitz
+* Update color picker

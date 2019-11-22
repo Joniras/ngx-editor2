@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@compodoc/compodoc/src/config/schema.json",
-  "name": "NgxEditor",
+  "name": "NgxTextEditor",
   "output": "./docs/",
   "tsconfig": "./src/tsconfig.app.json",
   "customFavicon": "./src/favicon.ico",

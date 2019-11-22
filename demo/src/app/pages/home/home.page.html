@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      ngx-text-editor
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list style="height: 100%;">
+    <ion-segment (ionChange)="onClickSegment($event)">
+      <ion-segment-button *ngFor="let segment of segments"
+                          [value]="segment.key"
+                          [checked]="segment.key === selectedSegment">
+        <ion-label>
+          {{ segment.label }}
+        </ion-label>
+      </ion-segment-button>
+    </ion-segment>
+
+    <ion-item-divider></ion-item-divider>
+
+    <ion-card *ngIf="selectedSegment === 'basic'"
+              style="height: 100%;">
+      <ion-card-content>
+        <ion-row>
+          <ion-col [size]="12">
+            <basic-component></basic-component>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>

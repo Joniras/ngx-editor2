@@ -1,101 +1,98 @@
 {
-  "name": "@joniras/ngx-editor2",
-  "version": "5.0.0",
-  "description": "WYSIWYG Editor for Angular Applications",
+  "name": "ngx-text-editor",
+  "version": "2.1.2",
+  "description": "WYSIWYG Editor for Angular 2+",
   "license": "MIT",
   "scripts": {
-    "build": "ng build --prod",
-    "docs": "compodoc && npm run publish:docs",
-    "e2e": "ng e2e",
-    "lint": "ng lint",
-    "ng": "ng",
-    "postbuild": "npm run build:package",
-    "prebuild": "npm run lint",
-    "prepublishOnly": "node ./scripts/prepublish.js",
-    "prerelease": "npm run build",
-    "publish:docs": "node ./scripts/publishdocs.js",
-    "release": "ng-packagr -p package.json && npm publish dist --access=public",
-    "start": "ng serve --port 4201",
-    "serve:docs": "compodoc --serve --open --output=\"docs/\"",
-    "test": "ng test",
-    "test:single-run": "ng test --watch false"
+    "build": "ng-packagr -p package.json && mkdir dist/styles && cp -r src/assets/styles/* dist/styles/",
+    "demo": "npm run build && cd demo && npm install && cp -fr ../dist/* node_modules/ngx-text-editor && ng serve",
+    "demo.build": "npm run build && cd demo && npm install && cp -fr ../dist/* node_modules/ngx-text-editor/ && ng build",
+    "docs": "npm run docs:build",
+    "docs:build": "compodoc -p tsconfig.json -n ngx-text-editor -d docs --hideGenerator",
+    "docs:serve": "npm run docs:build -- -s",
+    "docs:watch": "npm run docs:build -- -s -w",
+    "lint": "tslint --project tsconfig.json src/**/*.ts",
+    "publish": "npm publish dist",
+    "test": "tsc && karma start"
+  },
+  "ngPackage": {
+    "lib": {
+      "cssUrl": "inline",
+      "entryFile": "src/ngx-text-editor.module.ts",
+      "styleIncludePaths": [
+        "./src/scss"
+      ]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jrquick17/ngx-text-editor.git"
+  },
+  "author": {
+    "name": "Jeremy Quick",
+    "email": "me@jrquick.com"
   },
   "keywords": [
+    "angular",
     "angular-editor",
     "angular-wysiwyg-editor",
     "wysiwyg-editor",
     "ngx-editor",
-    "ngx-editor2"
+    "ngx-editor2",
+    "ngx-text-editor"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Joniras/ngx-editor2.git"
+  "bugs": {
+    "url": "https://github.com/jrquick17/ngx-text-editor/issues"
   },
-  "homepage": "https://github.com/Joniras/ngx-editor2",
+  "homepage": "https://github.com/jrquick17/ngx-text-editor",
   "peerDependencies": {
-    "@angular/common": ">=8.2.14",
-    "@angular/core": ">=8.2.14",
-    "@angular/forms": ">=8.2.14",
-    "font-awesome": ">=4.7.0",
-    "ngx-bootstrap": ">=5.2.0",
-    "rxjs": ">=6.5.3",
-    "@fortawesome/angular-fontawesome": ">=0.5.0",
-    "@fortawesome/fontawesome-svg-core": ">=1.2.25",
-    "@fortawesome/free-brands-svg-icons": ">=5.11.2",
-    "@fortawesome/free-regular-svg-icons": ">=5.11.2",
-    "@fortawesome/free-solid-svg-icons": ">=5.11.2"
+    "font-awesome": "^4.7.0",
+    "ngx-bootstrap": "^5.2.0",
+    "rxjs": "^6.5.3"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^0.803.19",
-    "@angular/animations": "^8.2.14",
-    "@angular/cli": "^8.3.19",
-    "@angular/common": "^8.2.14",
-    "@angular/compiler": "^8.2.14",
-    "@angular/compiler-cli": "^8.2.14",
-    "@angular/core": "^8.2.14",
-    "@angular/forms": "^8.2.14",
-    "@angular/http": "^7.2.15",
-    "@angular/language-service": "^8.2.14",
-    "@angular/platform-browser": "^8.2.14",
-    "@angular/platform-browser-dynamic": "^8.2.14",
-    "@angular/router": "^8.2.14",
+    "@angular-devkit/build-angular": "~0.803.12",
+    "@angular/animations": "^8.2.11",
+    "@angular/cli": "^8.3.12",
+    "@angular/common": "^8.2.11",
+    "@angular/compiler": "^8.2.11",
+    "@angular/compiler-cli": "^8.2.11",
+    "@angular/core": "^8.2.11",
+    "@angular/forms": "^8.2.11",
+    "@angular/language-service": "^8.2.11",
+    "@angular/platform-browser": "^8.2.11",
+    "@angular/platform-browser-dynamic": "^8.2.11",
+    "@angular/router": "^8.2.11",
     "@compodoc/compodoc": "^1.1.11",
-    "@types/jasmine": "~3.4.6",
-    "@types/jasminewd2": "~2.0.8",
-    "@types/node": "^12.12.11",
+    "@types/jasmine": "^3.4.4",
+    "@types/jasminewd2": "^2.0.8",
+    "@types/node": "^12.11.1",
     "bootstrap": "^4.3.1",
-    "chalk": "^3.0.0",
-    "codelyzer": "^5.2.0",
-    "core-js": "^3.4.1",
+    "chalk": "^2.4.2",
+    "codelyzer": "^5.1.2",
+    "core-js": "^3.3.2",
     "font-awesome": "^4.7.0",
     "gh-pages": "^2.1.1",
-    "husky": "^3.1.0",
     "inquirer": "^7.0.0",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
+    "jquery": "^3.4.1",
     "karma": "~4.4.1",
     "karma-chrome-launcher": "~3.1.0",
-    "karma-coverage-istanbul-reporter": "~2.1.0",
+    "karma-coverage-istanbul-reporter": "^2.1.0",
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.2",
-    "ng-packagr": "^5.7.1",
+    "ng-packagr": "^5.7.0",
     "ngx-bootstrap": "^5.2.0",
-    "protractor": "~5.4.2",
+    "popper": "^1.0.1",
+    "popper.js": "^1.16.0",
+    "protractor": "^5.4.2",
     "rxjs": "^6.5.3",
-    "ts-node": "^8.5.2",
-    "tsickle": "^0.37.1",
-    "tslint": "^5.20.1",
-    "typescript": "^3.5.3",
-    "zone.js": "^0.10.2",
-    "@fortawesome/angular-fontawesome": "^0.5.0",
-    "@fortawesome/fontawesome-svg-core": "^1.2.25",
-    "@fortawesome/free-brands-svg-icons": "^5.11.2",
-    "@fortawesome/free-regular-svg-icons": "^5.11.2",
-    "@fortawesome/free-solid-svg-icons": "^5.11.2"
+    "ts-node": "^8.4.1",
+    "tsickle": "^0.37.0",
+    "tslint": "^5.20.0",
+    "typescript": "3.5.3",
+    "zone.js": "~0.9.1"
   },
-  "ngPackage": {
-    "lib": {
-      "entryFile": "src/public_api.ts"
-    }
-  }
+  "$schema": "./node_modules/ng-packagr/package.schema.json"
 }

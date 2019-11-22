@@ -1,25 +1,19 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
+    "baseUrl": "./src",
+    "downlevelIteration": true,
+    "outDir": "./dist",
     "sourceMap": true,
-    "declaration": false,
-    "module": "es2015",
+    "declaration": true,
+    "module": "esnext",
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "target": "es5",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
+    "target": "es2015",
     "lib": [
       "es2017",
       "dom"
     ]
-  },
-  "exclude": [
-    ".ng_build",
-    ".ng_pkg_build"
-  ]
+  }
 }

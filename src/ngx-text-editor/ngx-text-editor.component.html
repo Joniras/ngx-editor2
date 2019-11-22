@@ -1,0 +1,35 @@
+<div class="ngx-text-editor"
+     id="ngxTextEditor"
+     [style.width]="config['width']"
+     [style.minWidth]="config['minWidth']"
+     tabindex="0"
+     (focus)="onEditorFocus()">
+
+  <ngx-text-editor-toolbar [config]="config"
+                           (execute)="executeCommand($event)"
+                           (uploadImage)="onUploadImage($event)"></ngx-text-editor-toolbar>
+
+  <!-- text area -->
+  <div #ngxWrapper
+       class="ngx-wrapper">
+    <div #ngxTextArea
+         class="ngx-text-editor-textarea"
+         [attr.contenteditable]="config['editable']"
+         (input)="onContentChange($event.target.innerHTML)"
+         [attr.translate]="config['translate']"
+         [attr.spellcheck]="config['spellcheck']"
+         [style.height]="config['height']"
+         [style.minHeight]="config['minHeight']"
+         [style.resize]="Utils?.canResize(resizer)"
+         (focus)="onTextAreaFocus()"
+         (blur)="onTextAreaBlur()"></div>
+
+    <span class="ngx-text-editor-placeholder">
+      {{ placeholder || config['placeholder'] }}
+    </span>
+  </div>
+
+  <ngx-text-editor-message></ngx-text-editor-message>
+
+  <ngx-grippie *ngIf="resizer === 'stack'"></ngx-grippie>
+</div>

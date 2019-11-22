@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('ngx-editor App', () => {
+describe('ngx-text-editor App', () => {
   let page: AppPage;
 
   beforeEach(() => {

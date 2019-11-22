@@ -10,9 +10,6 @@
 ### Checklist
 
 - [ ] Commit Messages follow the [Conventional Commits](https://conventionalcommits.org/) pattern
-  - A feature commit message is prefixed "feat:"
-  - A bugfix commit message is prefixed "fix:"
-  - A document related commit is prefixed "docs:"
 - [ ] Docs have been added / updated (for bug fixes / features)
 
 ### Description
