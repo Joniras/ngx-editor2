@@ -8,6 +8,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Released]
 
+## [5.0.0]
+### Changed
+- Increased Version and did some fixes [Joniras](https://github.com/joniras)
+ 
+## [5.0.0]
+### Changed
+- Added Fortawesome Compatibility  [Joniras](https://github.com/joniras)
+
 ## [2.1.2]
 ### Changed
 - Compatible with Ivy [jrquick17](https://github.com/jrquick17)

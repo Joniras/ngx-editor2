@@ -24,13 +24,9 @@ This is an Angular 2+ WYSIWYG component.
 
 ### Installation
 
-For Angular 2-7: 
-
-`npm install ngx-text-editor@^1.0.0 --save`
-
 For Angular 8+:
 
-`npm install ngx-text-editor --save`
+`npm install @joniras/ngx-editor2 --save`
 
 ### Documentation
 
@@ -44,8 +40,6 @@ import { NgxTextEditorModule } from 'ngx-text-editor';
 })
 ```
 
-Import [font-awesome](https://github.com/FortAwesome/Font-Awesome) into your application
-
 Then in HTML
 
 ```html
@@ -56,11 +50,8 @@ For `ngModel` to work, You must import `FormsModule` from `@angular/forms`
 
 ## Issues ##
 
-If you find any issues feel free to open a request in [the Issues tab](https://github.com/jrquick17/ngx-text-editor/issues). If I have the time I will try to solve any issues but cannot make any guarantees. Feel free to contribute yourself.
+If you find any issues feel free to open a request in [the Issues tab](https://github.com/Joniras/ngx-editor2/issues). If I have the time I will try to solve any issues but cannot make any guarantees. Feel free to contribute yourself.
 
-## Documentation
-
-Documentation is auto-generated using [compodoc][compodoc], and can be viewed here: [https://jrquick17.github.io/ngx-text-editor/](https://jrquick17.github.io/ngx-text-editor/)
 
 [npm]: https://www.npmjs.com/
 [yarn]: https://yarnpkg.com/lang/en/
@@ -79,6 +70,7 @@ A special thanks to all of our contributors! To contribute yourself just submit 
 * [Norddeutschland](https://github.com/Norddeutschland)
 * [sibiraj-s](https://github.com/sibiraj-s)
 * [ssuperczynski](https://github.com/)
+* [Joniras](https://github.com/joniras)
 
 ## Deploy ##
 
