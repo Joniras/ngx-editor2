@@ -1,6 +1,6 @@
 # ngx-text-editor
 
-![](example.png)
+![Example Image](example.png)
 
 ## Index ##
 
@@ -13,12 +13,13 @@
 * [Future Plans](#future-plans)
 * [FAQ](#faq)
 
+
 ## About ## 
 
-This is an Angular 2+ WYSIWYG component.  
+This is an Angular 8+ WYSIWYG component.  
+It has Fortawesome integrated for a more lightweight package
 
-* Visit the [demo](https://ngx-text-editor.jrquick.com) to see it in action!
-* Visit [my website](https://jrquick.com) for other cool projects!
+* Visit the [demo (of forked repo)](https://ngx-text-editor.jrquick.com) to see it in action!
 
 ## Setup
 
@@ -30,10 +31,10 @@ For Angular 8+:
 
 ### Documentation
 
-Import `ngx-text-editor` module
+Import `ngx-editor2` module
 
 ```typescript
-import { NgxTextEditorModule } from 'ngx-text-editor';
+import {NgxTextEditorModule} from "@joniras/ngx-editor2";
 
 @NgModule({
   imports: [ NgxTextEditorModule ]
@@ -47,6 +48,88 @@ Then in HTML
 ```
 
 For `ngModel` to work, You must import `FormsModule` from `@angular/forms`
+
+Alternatively you can pass a configuration object
+
+```html
+<ngx-text-editor [config]="default" [(ngModel)]="htmlContent"></ngx-text-editor>
+```
+And in Component (those are the default values)
+```typescript
+const default = {
+  editable: true,
+  spellcheck: true,
+  height: 'auto',
+  minHeight: '0',
+  width: 'auto',
+  minWidth: '0',
+  translate: 'yes',
+  enableToolbar: true,
+  showToolbar: true,
+  placeholder: 'Enter text here...',
+  imageEndPoint: '',
+  toolbar: [
+    ['h1', 'h2', 'h3', 'bold', 'italic', 'underline', 'strikeThrough', 'superscript', 'subscript'],
+    ['fontName', 'fontSize', 'color'],
+    ['justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull', 'indent', 'outdent'],
+    ['cut', 'copy', 'delete', 'removeFormat', 'undo', 'redo'],
+    ['paragraph', 'blockquote', 'removeBlockquote', 'horizontalLine', 'orderedList', 'unorderedList'],
+    ['link', 'unlink', 'image', 'video']
+  ],
+  toolbarTitle: {
+    'bold': 'Bold',
+    'italic': 'Italic',
+    'underline': 'Underline',
+    'strikeThrough': 'strikeThrough',
+    'superscript': 'Superscript',
+    'subscript': 'Subscript',
+    'fontName': 'Font Family',
+    'fontSize': 'Font Size',
+    'color': 'Color Picker',
+    'justifyLeft': 'Justify Left',
+    'justifyCenter': 'Justify Center',
+    'justifyRight': 'Justify Right',
+    'justifyFull': 'Justify Full',
+    'indent': 'Indent',
+    'outdent': 'Outdent',
+    'cut': 'Cut',
+    'copy': 'Copy',
+    'delete': 'Delete',
+    'removeFormat': 'Clear Formatting',
+    'undo': 'Undo',
+    'redo': 'Redo',
+    'paragraph': 'Paragraph',
+    'blockquote': 'Blockquote',
+    'removeBlockquote': 'Remove Blockquote',
+    'horizontalLine': 'Horizontal Line',
+    'orderedList': 'Ordered List',
+    'unorderedList': 'Color Picker',
+    'link': 'Insert Link',
+    'URLInput': 'URL',
+    'urlTextInput': 'Text',
+    'urlNewTab': 'Open in new tab',
+    'linkSubmit': 'Submit',
+    'unlink': 'Unlink',
+    'image': 'Insert Image',
+    'chooseImage': 'Choose Image',
+    'uploadingimage': 'Uploading Image',
+    'imageURLInput': 'URL',
+    'imageSubmit': 'Submit',
+    'video': 'Insert Video',
+    'videoURLInput': 'URL',
+    'height': 'height (px)',
+    'width': 'width (px)',
+    'heightwidth': 'Height/Width',
+    'videoSubmit': 'Submit',
+    'textColor': 'Text',
+    'backgroundColor': 'Background',
+    'hexInput': 'Hex Color',
+    'hexSubmit': 'Submit',
+    'fontSubmit': 'Submit',
+    'example': 'Ex:'
+  }
+}
+```
 
 ## Issues ##
 
@@ -70,7 +153,6 @@ A special thanks to all of our contributors! To contribute yourself just submit 
 * [Norddeutschland](https://github.com/Norddeutschland)
 * [sibiraj-s](https://github.com/sibiraj-s)
 * [ssuperczynski](https://github.com/)
-* [Joniras](https://github.com/joniras)
 
 ## Deploy ##
 
