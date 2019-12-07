@@ -8,7 +8,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Released]
 
-## [5.0.0]
+
+## [5.1.1]
+### Changed
+- Fixed deplaced Cursor in Firefox [#135](https://github.com/sibiraj-s/ngx-editor/issues/135)
+
+## [5.1.0]
 ### Changed
 - Increased Version and did some fixes [Joniras](https://github.com/joniras)
  

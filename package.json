@@ -1,6 +1,6 @@
 {
   "name": "@joniras/ngx-editor2",
-  "version": "5.1.0",
+  "version": "5.1.1",
   "description": "WYSIWYG Editor for Angular 8+",
   "license": "MIT",
   "scripts": {
