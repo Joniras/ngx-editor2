@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
-import {PopoverModule} from 'ngx-bootstrap';
+import {PopoverModule} from 'ngx-bootstrap/popover';
 
 import {NgxTextEditorComponent} from './ngx-text-editor/ngx-text-editor.component';
 import {NgxGrippieComponent} from './ngx-grippie/ngx-grippie.component';
